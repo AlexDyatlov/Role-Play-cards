@@ -76,6 +76,13 @@
 }
 // end card top
 
+.tabs-content{
+  display: none;
+}
+.tabs-content.tabs-content--active{
+  display: block;
+}
+
 .card__tabs{
   display: flex;
   justify-content: space-between;
@@ -103,6 +110,104 @@
     background-color: rgb(41, 44, 65);
   }
 }
-
-
+.card__item.tab--active{
+  background-color: rgb(41, 44, 65);
+}
+.statistics__inner{
+  background-color: rgb(35, 37, 52);
+  border-radius: 25px;
+  width: 1184px;
+  min-height: 741px;
+  padding: 46px 80px 88px 76px;
+}
+.statistics__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.person__info{
+  text-align: center;
+  max-width: 240px;
+  font-size: 18px;
+  &-title{
+    color: rgba(245, 245, 245, 0.6);
+    background-color: rgb(41, 44, 65);
+    border-radius: 25px;
+    padding: 7px 0 8px;
+  }
+  &-img{
+    background-color: rgb(41, 44, 65);
+    border-radius: 25px;
+    margin: 5px 0 4px;
+    min-height: 313px;
+    img{
+      position: relative;
+      padding-top: 9px;
+      width: 262px;
+      left: -27px;
+      top: 4px;
+    }
+  }
+  &-name{
+    background-color: rgb(41, 44, 65);
+    border-radius: 25px;
+    color: #f5f5f5;
+    padding: 7px 0 8px;
+  }
+}
+.statistics__items{
+  display: flex;
+  justify-content: space-between;
+  max-width: 743px;
+  width: 100%;
+}
+.statistics__box{
+  width: 357px;
+}
+.item__info{
+  margin-bottom: 12px;
+  &-title{
+    color: $blue;
+    font-size: 19px;
+    margin-bottom: 12px;
+  }
+  &-description{
+    font-size: 22px;
+    color: rgba(243, 243, 243, 0.82);
+    background-color: rgb(41, 44, 65);
+    border-radius: 25px;
+    padding: 8px 23px;
+  }
+}
+.list__items{
+  border-radius: 25px;
+  background-color: rgb(42, 44, 57);
+  padding: 40px 45px 40px 55px;
+  margin-bottom: 7px;
+  button{
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    color: #b4b3b3;
+    & + button{
+      margin-left: 5px;
+    }
+    &:hover{
+      color: $blue;
+    }
+  }
+}
+.list__item-btn.list__item-btn--active{
+  color: $blue;
+}
+.person-license{
+  font-size: 18px;
+  display: inline-block;
+  color: #f5f5f5;
+  border-radius: 25px;
+  background-color: rgb(42, 44, 57);
+  padding: 7px 65px 9px;
+}
 @import 'media';
