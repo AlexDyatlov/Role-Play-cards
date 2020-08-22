@@ -11,16 +11,37 @@
     background-size: cover;
     background-position: center;
     padding: 105px 70px 30px 320px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/girl.png');
+      width: 450px;
+      height: 1031px;
+      left: -14px;
+      bottom: 27px;
+    }
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__logo{
+    display: block;
+    margin-left: auto;
   }
 }
-
-// strat card top
-.card__top{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
+.card__inner-exit{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  cursor: pointer;
 }
+// strat card top
 .money__box{
   display: flex;
   justify-content: space-between;
@@ -76,16 +97,17 @@
 }
 // end card top
 
+// start tab-1
 .tabs-content{
   display: none;
 }
 .tabs-content.tabs-content--active{
   display: block;
 }
-
 .card__tabs{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 .card__items{
   max-width: 295px;
@@ -102,6 +124,7 @@
   display: block;
   margin-bottom: 5px;
   transition: all .5s;
+  position: relative;
   &-title{
     margin-top: 20px;
     color: $color-text;
@@ -210,4 +233,136 @@
   background-color: rgb(42, 44, 57);
   padding: 7px 65px 9px;
 }
+// end tab-1
+
+// start tab-2
+.slider-inner{
+  max-width: 1185px;
+}
+.business__item{
+  max-width: 590px;
+  margin-left: 4px;
+  min-height: 741px;
+  border-radius: 25px;
+  background-color: rgb(35, 37, 52);
+  padding: 45px 30px 20px 54px;
+  outline: transparent;
+  &-img{
+    margin-bottom: 33px;
+    img{
+      width: 505px;
+      height: 277px;
+    }
+  }
+}
+.item__info-box{
+  display: flex;
+  justify-content: space-between;
+}
+.business__btn{
+  button{
+    background-color: transparent;
+    border: none;
+    color: $gray;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover{
+      color: #0bc9d2;
+    }
+  }
+}
+
+.cars__info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #4e5375;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 7px 55px 10px 73px;
+  cursor: pointer;
+  &-title{
+    color: #f1f1f1;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/wheel.png');
+      width: 25px;
+      height: 25px;
+      left: -40px;
+      top: -2px;
+    }
+  }
+  &-model{
+    color: #b4b3b3;
+  }
+  &:hover{
+    background-color: #292c41;
+  }
+}
+.cars__list{
+  display: none;
+  &-btn{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 45px 10px;
+    cursor: pointer;
+    color: #d0cfcf;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    &:hover{
+      color: $blue;
+      background-color: #232534;
+    }
+  }
+}
+.cars__box--active .cars__list{
+  display: block;
+  background-color: #292c41;
+  border-radius: 25px;
+  padding: 22px 0px;
+}
+.cars__list-btn.cars__list-btn--active{
+  color: $blue;
+  background-color: #232534;
+}
+
+
+.slider-arrows{
+  position: absolute;
+  bottom: -27px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: none;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  background-color: $blue;
+  cursor: pointer;
+}
+.slider-arrows__right{
+  left: 10px;
+}
+.slider-arrows__left{
+  right: 0px;
+}
+.slider-arrows.slick-disabled{
+  cursor: default;
+  background-color: rgba(248, 248, 248, .1);
+}
+// end tab-2
+
+
+
+
+
+
+
+
 @import 'media';
