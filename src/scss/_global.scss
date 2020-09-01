@@ -51,3 +51,19 @@ body{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.tab__inner{
+  border-radius: 25px;
+  background-color: #232534;
+  padding: 136px 0 25px;
+  width: 728px;
+  min-height: 741px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
