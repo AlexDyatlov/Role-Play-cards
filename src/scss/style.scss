@@ -597,6 +597,242 @@
 }
 // end tab-3
 
+// start new page
+.service{
+  min-height: 1080px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 91px 0;
+  &__inner{
+    max-width: 1222px;
+    min-height: 615px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #19181f;
+    padding: 48px 47px 50px 62px;
+  }
+}
+.service__items{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: #232534;
+  padding: 15px 88px 14px 91px;
+  margin-bottom: 17px;
+}
+.service__item{
+  font-size: 20px;
+  color: rgba(243, 243, 243, 0.8);
+  position: relative;
+  &:nth-child(4){
+    margin-right: 205px;
+  }
+  &-exit{
+    font-size: 20px;
+    color: rgba(243, 243, 243, 0.8);
+  }
+}
+.service__item.tab--active{
+  &::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 140%;
+    transform: translate(-50%, 0);
+    width: 110px;
+    height: 2px;
+    background-color: $blue;
+  }
+}
+// start page tab-1
+.home__items{
+  display: flex;
+  justify-content: space-between;
+}
+.home__item{
+  text-align: center;
+  color: rgba(238, 238, 238, 0.741);
+  width: 270px;
+  min-height: 353px;
+  border-radius: 15px;
+  background-color: #232534;
+  padding: 32px 0px 33px;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover,
+  &:focus{
+    background-color: #1b1c24;
+  }
+  &-title{
+    font-size: 18px;
+    width: 130px;
+    margin: 0 auto;
+  }
+  &-img{
+    margin: 42px 0 34px;
+    min-height: 94px;
+  }
+  &-text{
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(238, 238, 238, 0.71);
+    width: 197px;
+    margin: 0 auto;
+  }
+}
+// end page tab-1
+
+// start page tab-2
+.vip__items{
+  display: flex;
+  justify-content: space-between;
+}
+.vip__item{
+  width: 270px;
+  min-height: 353px;
+  border-radius: 15px;
+  background-color: #232534;
+  padding: 18px 34px 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover,
+  &:focus{
+    background-color: #1b1c24;
+  }
+  &-title{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgba(243, 243, 243, 0.8);
+  }
+  &-img{
+    margin: 14px 0 30px;
+  }
+}
+.vip__list-item{
+  text-align: left;
+  font-size: 15px;
+  color: rgba(243, 243, 243, 0.7);
+  & + &{
+    margin-top: 12px;
+  }
+}
+// end page tab-2
+
+// start page tab-3
+.roulette__items{
+  display: flex;
+  justify-content: space-between;
+}
+.roulette__item{
+  width: 549px;
+  min-height: 353px;
+  border-radius: 15px;
+  background-color: #232534;
+  text-align: center;
+  padding: 28px;
+  &-img{
+    min-height: 92px;
+  }
+  &-title{
+    margin: 25px 0 20px;
+    font-size: 18px;
+    color: #f3f3f3;
+  }
+  &-text{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(243, 243, 243, 0.4);
+    margin-bottom: 26px;
+  }
+  &-btn{
+    font-size: 18px;
+    color: #232534;
+    border-radius: 15px;
+    background-color: $blue;
+    padding: 5px 0 7px;
+    display: block;
+    width: 175px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+// end page tab-3
+
+// start page tab-4
+.packs__items{
+  display: flex;
+  justify-content: space-between;
+}
+.pack__item{
+  max-width: 270px;
+  width: 100%;
+  min-height: 353px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 15px;
+  background-color: #232534;
+  padding: 0 40px 5px;
+  cursor: pointer;
+  transition: all .3s;
+  &-img{
+    min-height: 104px;
+  }
+  &-title{
+    font-size: 20px;
+    color: #f7f7f7;
+    margin-bottom: 45px;
+  }
+  &:hover,
+  &:focus{
+    background-color: #1b1c24;
+  }
+}
+.pack__list-item{
+  text-align: left;
+  font-size: 13px;
+  color: rgba(238, 238, 238, 0.6);
+  & + &{
+    margin-top: 18px;
+  }
+}
+// end page tab-4
+.service__form{
+  margin-top: 18px;
+
+  input{
+    background-color: #232534;
+    border: none;
+    font-size: 18px;
+    color: rgba(244, 244, 244, 0.702);
+    &::placeholder{
+      color: rgba(244, 244, 244, 0.702);
+      font-size: 18px;
+    }
+  }
+  &-btn{
+    color: #232534;
+    font-size: 18px;
+    background-color: $blue;
+    padding: 0 18px 0 18px;
+    border: none;
+  }
+}
+.service__description{
+  display: flex;
+  justify-content: space-between;
+  &-text{
+    font-size: 15px;
+    color: rgba(#f3f3f3, .5);
+  }
+}
+// end new page
+
+
+
 
 
 

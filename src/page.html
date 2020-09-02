@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/_head.html')
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  @@include('components/_header.html')
+  <main class="service" style="background-image: url('../images/service-bg.png');">
+    <div class="service__inner">
+      <div class="service__items tabs-wrapper">
+        <a class="tab service__item tab--active" href="#tab-1">
+          მთავარი
+        </a>
+        <a class="tab service__item" href="#tab-2">
+          ვიაიპი
+        </a>
+        <a class="tab service__item" href="#tab-3">
+          იღბალი
+        </a>
+        <a class="tab service__item" href="#tab-4">
+          ნაკრები
+        </a>
+        <a class="service__item-exit" href="#">
+          დახურვა
+        </a>
+      </div>
+      <div class="tab-content">
+        <div id="tab-1" class="tabs-content tabs-content--active">
+          <div class="home__items">
+            <div class="home__item">
+              <div class="home__item-title">
+                გარეგნობის შეცვლა
+              </div>
+              <div class="home__item-img">
+                <img src="images/icons/view.png" alt="">
+              </div>
+              <p class="home__item-text">
+                თუ თქვენ გსურთ თქვენს პერსონაჟზე გარეგონობის შეცვლა უნდა გამოიყენოთ ეს სერვისი
+              </p>
+            </div>
+            <div class="home__item">
+              <div class="home__item-title">
+                სახელის შეცვლა
+              </div>
+              <div class="home__item-img">
+                <img src="images/icons/name.png" alt="">
+              </div>
+              <p class="home__item-text">
+                თუ თქვენ გსურთ თქვენს პერსონაჟზე სახელის გვარის ან ორივეს ცვილება გამოიყენეთ ეს სერვისი
+              </p>
+            </div>
+            <div class="home__item">
+              <div class="home__item-title">
+                ვორნის მოხსნა
+              </div>
+              <div class="home__item-img">
+                <img src="images/icons/sign.png" alt="">
+              </div>
+              <p class="home__item-text">
+                თუ თქვენ გაქვთ გაფხილება ანუ იგივე “ვორნი” მოსახსნელად გამოიყენეთ ეს სერვისი
+              </p>
+            </div>
+            <div class="home__item">
+              <div class="home__item-title">
+                ლიცენზიების პაკეტი
+              </div>
+              <div class="home__item-img">
+                <img src="images/icons/license.png" alt="">
+              </div>
+              <p class="home__item-text">
+                ამ პაკეტის შეძენის შემთხვევაში თქვენ გადმოგეცემათ შტატში არსებული ყველა ლიცენზია.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="tab-2" class="tabs-content">
+          <div class="vip__items">
+            <div class="vip__item">
+              <div class="vip__item-title">BRONZE</div>
+              <img class="vip__item-img" src="images/icons/bronze.png" alt="">
+              <ul class="vip__list">
+                <li class="vip__list-item">სწრაფი განკურნება</li>
+                <li class="vip__list-item">2X EXP</li>
+                <li class="vip__list-item">კომანდი /LEAVE</li>
+                <li class="vip__list-item">გაზრდილი ხელფასი</li>
+              </ul>
+            </div>
+            <div class="vip__item">
+              <div class="vip__item-title">SILVER</div>
+              <img class="vip__item-img" src="images/icons/silver.png" alt="">
+              <ul class="vip__list">
+                <li class="vip__list-item">სწრაფი განკურნება</li>
+                <li class="vip__list-item">2X EXP</li>
+                <li class="vip__list-item">კომანდი /LEAVE</li>
+                <li class="vip__list-item">გაზრდილი ხელფასი</li>
+                <li class="vip__list-item">საკვების მოთხ -60%</li>
+              </ul>
+            </div>
+            <div class="vip__item">
+              <div class="vip__item-title">GOLD</div>
+              <img class="vip__item-img" src="images/icons/gold.png" alt="">
+              <ul class="vip__list">
+                <li class="vip__list-item">სწრაფი განკურნება</li>
+                <li class="vip__list-item">2X EXP</li>
+                <li class="vip__list-item">კომანდი /LEAVE</li>
+                <li class="vip__list-item">გაზრდილი ხელფასი</li>
+                <li class="vip__list-item">საკვების მოთხ -75%</li>
+              </ul>
+            </div>
+            <div class="vip__item">
+              <div class="vip__item-title">PLATINUM</div>
+              <img class="vip__item-img" src="images/icons/platinum.png" alt="">
+              <ul class="vip__list">
+                <li class="vip__list-item">სწრაფი განკურნება</li>
+                <li class="vip__list-item">3X EXP</li>
+                <li class="vip__list-item">კომანდი /LEAVE</li>
+                <li class="vip__list-item">გაზრდილი ხელფასი</li>
+                <li class="vip__list-item">საკვების მოთხ -85%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="tab-3" class="tabs-content">
+          <div class="roulette__items">
+            <div class="roulette__item">
+              <div class="roulette__item-img">
+                <img src="images/icons/roulette.png" alt="">
+              </div>
+              <div class="roulette__item-title">
+                რულეტკა - ROULETTE
+              </div>
+              <div class="roulette__item-text">
+                სამაგიდო აზარტული თამაში ჩვენს პროექტზე. სადაც შანი გეძლევათ მოიგოთ თანხა და უამრავი ექსკლუზიური პრიზი. ერთი დატრიალების ღირებულებაა 200DP.
+              </div>
+              <a class="roulette__item-btn" href="#">ითამაშე</a>
+            </div>
+            <div class="roulette__item">
+              <div class="roulette__item-img">
+                <img src="images/icons/case.png" alt="">
+              </div>
+              <div class="roulette__item-title">
+                სკივრი - CASE
+              </div>
+              <div class="roulette__item-text">
+                ძალიან პოპულარული მინი თამაში რომელიც ასევე გაძლევთ შანსს მოიგოთ ფულადი პრიზი, დონატ პაკეტები და სხვა. 1
+                სკივრის გახსნის ღირებულებაა: 100DP.
+              </div>
+              <a class="roulette__item-btn" href="#">გახსნა</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab-4" class="tabs-content">
+          <div class="packs__items">
+            <div class="pack__item">
+              <div class="pack__item-img">
+                <img src="images/icons/pack-1.png" alt="">
+              </div>
+              <div class="pack__item-title">HYPE 01</div>
+              <ul class="pack__list">
+                <li class="pack__list-item">BRONZE VIP</li>
+                <li class="pack__list-item">80 000$</li>
+                <li class="pack__list-item">DRIVER LICENSE</li>
+                <li class="pack__list-item">1 DONATE CASE</li>
+                <li class="pack__list-item">CARABINE RIFFLE</li>
+              </ul>
+            </div>
+            <div class="pack__item">
+              <div class="pack__item-img">
+                <img src="images/icons/pack-2.png" alt="">
+              </div>
+              <div class="pack__item-title">HYPE 02</div>
+              <ul class="pack__list">
+                <li class="pack__list-item">SILVER VIP</li>
+                <li class="pack__list-item">150 000$</li>
+                <li class="pack__list-item">ALL LICENSES</li>
+                <li class="pack__list-item">2 DONATE CASE</li>
+                <li class="pack__list-item">CARABINE RIFFLE</li>
+              </ul>
+            </div>
+            <div class="pack__item">
+              <div class="pack__item-img">
+                <img src="images/icons/pack-3.png" alt="">
+              </div>
+              <div class="pack__item-title">HYPE 03</div>
+              <ul class="pack__list">
+                <li class="pack__list-item">GOLD VIP</li>
+                <li class="pack__list-item">250 000$</li>
+                <li class="pack__list-item">ALL LICENSES</li>
+                <li class="pack__list-item">5 DONATE CASE</li>
+                <li class="pack__list-item">2X CARABINE RIFFLE</li>
+              </ul>
+            </div>
+            <div class="pack__item">
+              <div class="pack__item-img">
+                <img src="images/icons/pack-4.png" alt="">
+              </div>
+              <div class="pack__item-title">HYPE 04</div>
+              <ul class="pack__list">
+                <li class="pack__list-item">PLATINUM VIP</li>
+                <li class="pack__list-item">600 000$</li>
+                <li class="pack__list-item">ALL LICENSES</li>
+                <li class="pack__list-item">10 DONATE CASE</li>
+                <li class="pack__list-item">2X SNIPER RIFFLE</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="service__form">
+        <input class="service__form-give" type="number" placeholder="DP რაოდენობა" required>
+        <input class="service__form-receive" type="number" placeholder="დაგერიცხებათ" required>
+        <button class="service__form-btn" type="submit">კონვერტაცია</button>
+      </form>
+      <div class="service__description">
+        <p class="service__description-text">მიუთითეთ მონეტების რაოდენობა</p>
+        <p class="service__description-text">რამდენს მიიღებთ სანაცვლოდ</p>
+        <p class="service__description-text">დააჭირეთ კონვერტაციას</p>
+      </div>
+    </div>
+  </main>
+ 
+  
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>
