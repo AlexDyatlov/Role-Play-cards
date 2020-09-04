@@ -802,12 +802,16 @@
 // end page tab-4
 .service__form{
   margin-top: 18px;
-
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
   input{
     background-color: #232534;
     border: none;
     font-size: 18px;
     color: rgba(244, 244, 244, 0.702);
+    padding: 0 28px;
+    height: 53px;
     &::placeholder{
       color: rgba(244, 244, 244, 0.702);
       font-size: 18px;
@@ -817,23 +821,60 @@
     color: #232534;
     font-size: 18px;
     background-color: $blue;
-    padding: 0 18px 0 18px;
+    border-radius: 0 15px 15px 0;
+    height: 53px;
+    width: 313px;
     border: none;
+    cursor: pointer;
+  }
+  &-give{
+    width: 367px;
+    border-radius: 15px 0 0 15px;
+  }
+  &-receive{
+    width: 432px;
   }
 }
 .service__description{
   display: flex;
   justify-content: space-between;
   &-text{
+    width: 310px;
     font-size: 15px;
     color: rgba(#f3f3f3, .5);
+    &:nth-child(2){
+      margin-right: 55px;
+    }
   }
 }
 // end new page
 
+// start Barba animate
+.loading-screen{
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 0%;
+  height: 100%;
+  background-image: url('../images/service.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.load-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+}
 
-
+// end Barba animate
 
 
 @import 'media';

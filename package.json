@@ -10,10 +10,12 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "@barba/core": "^2.9.7",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "fontforge": "^0.0.4",
     "global": "^4.4.0",
+    "gsap": "^3.5.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0-beta.2",

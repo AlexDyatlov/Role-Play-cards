@@ -15,31 +15,35 @@
   <title>Document</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
   <header>
 
 </header>
-  <main class="service" style="background-image: url('../images/service-bg.png');">
+  <div class="load-container">
+    <div class="loading-screen"></div>
+  </div>
+
+  <main class="service" data-barba="container" data-barba-namespace="about-section" style="background-image: url('../images/service-bg.png');">
     <div class="service__inner">
       <div class="service__items tabs-wrapper">
-        <a class="tab service__item tab--active" href="#tab-1">
+        <a class="tab service__item tab--active" href="#tab1">
           მთავარი
         </a>
-        <a class="tab service__item" href="#tab-2">
+        <a class="tab service__item" href="#tab2">
           ვიაიპი
         </a>
-        <a class="tab service__item" href="#tab-3">
+        <a class="tab service__item" href="#tab3">
           იღბალი
         </a>
-        <a class="tab service__item" href="#tab-4">
+        <a class="tab service__item" href="#tab4">
           ნაკრები
         </a>
-        <a class="service__item-exit" href="#">
+        <a class="service__item-exit" href="index.html">
           დახურვა
         </a>
       </div>
       <div class="tab-content">
-        <div id="tab-1" class="tabs-content tabs-content--active">
+        <div id="tab1" class="tabs-content tabs-content--active">
           <div class="home__items">
             <div class="home__item">
               <div class="home__item-title">
@@ -87,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div id="tab-2" class="tabs-content">
+        <div id="tab2" class="tabs-content">
           <div class="vip__items">
             <div class="vip__item">
               <div class="vip__item-title">BRONZE</div>
@@ -134,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div id="tab-3" class="tabs-content">
+        <div id="tab3" class="tabs-content">
           <div class="roulette__items">
             <div class="roulette__item">
               <div class="roulette__item-img">
@@ -163,7 +167,7 @@
             </div>
           </div>
         </div>
-        <div id="tab-4" class="tabs-content">
+        <div id="tab4" class="tabs-content">
           <div class="packs__items">
             <div class="pack__item">
               <div class="pack__item-img">
@@ -237,8 +241,10 @@
   <footer>
   
 </footer>
-  <script src="js/libs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="js/anim.js"></script>
 </body>
-
 </html>

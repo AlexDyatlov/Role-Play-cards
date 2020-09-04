@@ -1,5 +1,8 @@
 $(function(){
 
+ /* Start BARBA HOOKS */
+  barba.hooks.beforeEnter(() => {
+
   $('.tab').on('click', function(e){
     e.preventDefault();
 
@@ -46,7 +49,7 @@ $(function(){
         
           document
             .querySelectorAll('.cars__box')
-            .forEach((child) => child.classList.remove('cars__box--active'))
+            .forEach((child) => child.classList.remove('cars__box--active'));
               
           parent.classList.add('cars__box--active');
           
@@ -62,5 +65,7 @@ $(function(){
     prevArrow: '<button class="slider-arrows faction-arrows slider-arrows__right"><img src="images/icons/arrow-left.svg" alt=""></button>',
     nextArrow: '<button class="slider-arrows faction-arrows slider-arrows__left"><img src="images/icons/arrow-right.svg" alt=""></button>',
   });
+
+  });  /* End BARBA HOOKS */
 
 });
