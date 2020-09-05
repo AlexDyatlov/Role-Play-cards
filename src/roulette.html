@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/_head.html')
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body data-barba="wrapper">
+  @@include('components/_header.html')
+  <div class="load-container">
+    <div class="loading-screen"></div>
+  </div>
+
+  <main class="roulette" data-barba="container" data-barba-namespace="about-section" style="background-image: url('images/roulette-bg.png');">
+    <div class="container">
+      <div class="roulette__top">
+        <a class="roulette__top-back" href="page.html">
+          უკან დაბრუნება
+        </a>
+        <div class="roulette__box">
+          <div class="roulette__box-info">
+            <div class="roulette__box-name">Mike Robox</div>
+            <div class="roulette__box-score">ანგარიშზე: <span>2000</span> HC</div>
+          </div>
+          <div class="roulette__box-img">
+            <img src="images/content/face.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="roulette__list">
+        <a class="roulette__list-item roulette__list-item-active" href="#">რულეტკა</a>
+        <a class="roulette__list-item" href="#">ქოინების გადაცვლა</a>
+        <a class="roulette__list-item" href="#">ბალანსის შევსება</a>
+        <a class="roulette__list-item" href="#">დახმარება</a>
+      </div>
+      <div class="roulette__inner" style="background-image: url('images/content/roulette.png');">
+        <div class="content__items">
+          <div class="content__item content__item-darkblue">
+            <img class="content__item-img" src="images/content/item-1.png" alt="">
+          </div>
+          <div class="content__item content__item-green">
+            <img class="content__item-img" src="images/content/item-2.png" alt="">
+          </div>
+          <div class="content__item content__item-yellow">
+            <img class="content__item-img" src="images/content/item-3.png" alt="">
+          </div>
+          <div class="content__item content__item-purple">
+            <img class="content__item-img" src="images/content/item-4.png" alt="">
+          </div>
+          <div class="content__item content__item-blue">
+            <img class="content__item-img" src="images/content/item-5.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="roulette__button">
+        <button class="roulette__button-btn">დატრიალება</button>
+        <p class="roulette__button-descr">1 დატრიალების ღირებულებაა 200H ქოინი</p>
+      </div>
+    </div>
+  </main>
+
+
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

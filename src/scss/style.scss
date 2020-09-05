@@ -493,6 +493,7 @@
   }
 }
 .table__list{
+  outline: transparent;
   &-item{
     display: flex;
     justify-content: space-between;
@@ -537,6 +538,7 @@
     bottom: 0;
     width: 368px;
     height: 420px;
+    z-index: 5;
   }
 }
 .content{
@@ -563,15 +565,28 @@
     }
   }
   &-btn{
+    position: relative;
     width: 100%;
     border-radius: 15px;
-    background-color: $blue;
+    background-color: #292c41;
     border: none;
     font-size: 20px;
-    color: #232534;
+    color: $color-text;
     padding: 18px 0 22px;
     cursor: pointer;
     margin-bottom: 65px;
+    overflow: hidden;
+    transition: 1s all ease;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $blue;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+      transition: all .6s ease;
+    }
   }
   &-descr{
     max-width: 295px;
@@ -631,18 +646,51 @@
   &-exit{
     font-size: 20px;
     color: rgba(243, 243, 243, 0.8);
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: #0bf1ff;
+      transition: .3s;
+    }
+    &:hover{
+      color: $blue;
+      &:before{
+        width: 100%;
+        left: 0;
+        background-color: #0bf1ff;
+      }
+    }
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0bf1ff;
+    transition: .3s;
+  }
+  &:hover{
+    color: $blue;
+    &:before{
+      width: 100%;
+      left: 0;
+      background-color: #0bf1ff;
+    }
   }
 }
 .service__item.tab--active{
+  color: $blue;
   &::before{
-    position: absolute;
-    content: '';
-    left: 50%;
-    top: 140%;
-    transform: translate(-50%, 0);
-    width: 110px;
-    height: 2px;
-    background-color: $blue;
+    width: 100%;
+    left: 0;
+    background-color: #0bf1ff;
   }
 }
 // start page tab-1
@@ -749,15 +797,28 @@
     margin-bottom: 26px;
   }
   &-btn{
+    position: relative;
     font-size: 18px;
-    color: #232534;
+    color: rgba(244, 244, 244, .7);
     border-radius: 15px;
-    background-color: $blue;
     padding: 5px 0 7px;
     display: block;
     width: 175px;
     margin: 0 auto;
     cursor: pointer;
+    background-color: #19181f;
+    overflow: hidden;
+    transition: 1s;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $blue;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+      transition: all .6s ease;
+    }
   }
 }
 // end page tab-3
@@ -818,14 +879,19 @@
     }
   }
   &-btn{
-    color: #232534;
+    color: rgba(244,244,244,.702);
     font-size: 18px;
-    background-color: $blue;
+    background-color: #232534;
     border-radius: 0 15px 15px 0;
     height: 53px;
     width: 313px;
     border: none;
     cursor: pointer;
+    transition: all .5s;
+    &:hover{
+      background-color: $blue;
+      color: #232534;
+    }
   }
   &-give{
     width: 367px;
@@ -847,8 +913,6 @@
     }
   }
 }
-// end new page
-
 // start Barba animate
 .loading-screen{
   position: relative;
@@ -857,7 +921,7 @@
   padding-top: 0;
   width: 0%;
   height: 100%;
-  background-image: url('../images/service.png');
+  background-image: url('../images/service-bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -875,6 +939,261 @@
 }
 
 // end Barba animate
+
+.invite__content-btn,
+.change__content-btn,
+.roulette__btn-roul{
+  z-index: 3;
+  &::before{
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:hover{
+    color: #232534;
+    &::before{
+      height: 600%;
+    }
+  }
+}
+.exile__content-btn,
+.roulette__btn-case{
+  z-index: 3;
+  &::before{
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:hover{
+    color: #232534;
+    &::before{
+      height: 600%;
+    }
+  }
+}
+// end new page
+
+// start roulette
+.roulette{
+  min-height: 1440px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 109px 0;
+}
+.roulette__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-back{
+    font-size: 32px;
+    color: rgba(245, 245, 245, 0.7);
+    margin-left: 150px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      left: -80px;
+    top: -25px;
+      width: 84px;
+      height: 84px;
+      background-image: url('../images/icons/roulette-arrow.png');
+    }
+  }
+}
+.roulette__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  text-align: right;
+  &-info{
+   width: 580px;
+   font-size: 25px;
+   color: rgba(245, 245, 245, 0.7);
+  }
+  &-name{
+    color: rgba(245, 245, 245, 0.8);
+  }
+  &-img{
+    border-radius: 15px;
+    background-color: rgb(20, 24, 25);
+    width: 76px;
+    height: 76px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      left: -20px;
+      top: 0;
+      width: 2px;
+      height: 76px;
+      background-color: #929599;
+    }
+  }
+}
+.roulette__list{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1130px;
+  margin: 175px auto 0;
+  &-item{
+    font-size: 30px;
+    color: #fdfdfd;
+    &-active{
+      color: $blue;
+    }
+    &:hover{
+      color: $blue;
+    }
+  }
+}
+.roulette__inner{
+  min-height: 719px;
+  width: 1981px;
+  margin-left: -40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 170px;
+    height: 140px;
+    background-image: url('../images/icons/arrow-down.png');
+  }
+  &::after{
+    position: absolute;
+    content: '';
+    bottom: -3%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 137px;
+    height: 113px;
+    background-image: url('../images/icons/arrow-up.png');
+  }
+}
+.content__items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 719px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.content__item{
+  width: 259px;
+  height: 259px;
+  border-radius: 15px;
+  transform: rotate(80deg);
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    left: -10px;
+    top: 0;
+    width: 275px;
+    height: 275px;
+    border-radius: 15px;
+    background-color: transparent;
+    transform: rotate(103deg);
+  }
+  &-img{
+    position: absolute;
+    transform: rotate(-80deg);
+    left: -15px;
+    top: 65px;
+  }
+}
+.content__item-darkblue{
+  background-color: #293a4b;
+  img{
+    left: -20px;
+    top: 15px;
+  }
+  &::before{
+    border: 5px solid rgb(30, 109, 255);
+    box-shadow: 0 0 8px 2px rgba(30,109,255,.74);
+  }
+}
+.content__item-green{
+  background-color: #30ae5d;
+  img{
+    left: -15px;
+    top: 77px;
+  }
+  &::before{
+    border: 5px solid rgb(26, 228, 97);
+    box-shadow: 0px 0px 8px 5px rgba(26,228,97,0.74);
+  }
+}
+.content__item-yellow{
+  background-color: #d4b22c;
+  img{
+    left: 20px;
+    top: 55px;
+  }
+  &::before{
+    border: 5px solid rgb(212, 178, 44);
+    box-shadow: 0px 0px 8px 5px rgba(212,178,44,0.74);
+  }
+}
+.content__item-purple{
+  background-color: #9927af;
+  &::before{
+    border: 5px solid rgb(235, 9, 255);
+    box-shadow: 0px 0px 8px 2px rgba(235,9,255,0.74);
+  }
+}
+.content__item-blue{
+  background-color: #209499;
+  &::before{
+    border: 5px solid rgb(3, 246, 255);
+    box-shadow: 0px 0px 8px 2px rgba(3,246,255,0.74);
+  }
+}
+
+
+
+.roulette__button{
+  max-width: 452px;
+  margin: 0 auto;
+  &-btn{
+    color: #fdfdfd;
+    font-size: 33px;
+    padding: 22px 0px 17px;
+    width: 100%;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    background-color: #283646;
+    margin-bottom: 2px;
+    transition: all .5s;
+    &:hover{
+      background-color: #0dc2ec;
+    }
+  }
+  &-descr{
+    font-size: 18px;
+    color: rgba(253, 253, 253, 0.388);
+    padding: 8px 15px 7px;
+    background-color: #283646;
+    border-radius: 0 0 15px 15px;
+  }
+}
+// end roulette
+
+
+
+
+
+
+
+
 
 
 @import 'media';
