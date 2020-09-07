@@ -37,28 +37,56 @@
         <a class="roulette__list-item" href="#">დახმარება</a>
       </div>
       <div class="roulette__inner" style="background-image: url('images/content/roulette.png');">
-        <div class="content__items">
-          <div class="content__item content__item-darkblue">
-            <img class="content__item-img" src="images/content/item-1.png" alt="">
-          </div>
-          <div class="content__item content__item-green">
-            <img class="content__item-img" src="images/content/item-2.png" alt="">
-          </div>
-          <div class="content__item content__item-yellow">
-            <img class="content__item-img" src="images/content/item-3.png" alt="">
-          </div>
-          <div class="content__item content__item-purple">
-            <img class="content__item-img" src="images/content/item-4.png" alt="">
-          </div>
-          <div class="content__item content__item-blue">
-            <img class="content__item-img" src="images/content/item-5.png" alt="">
+        <div class="content__items-container">
+          <div class="content__items" id="roulette">
+            <div class="content__item content__item-darkblue"
+              style="background-image: url('images/content/roulette-1.png');">
+              <img class="content__item-img" src="images/content/item-1.png" alt="">
+            </div>
+            <div class="content__item content__item-green"
+              style="background-image: url('images/content/roulette-2.png');">
+              <img class="content__item-img" src="images/content/item-2.png" alt="">
+            </div>
+            <div class="content__item content__item-yellow"
+              style="background-image: url('images/content/roulette-3.png');">
+              <img class="content__item-img" src="images/content/item-3.png" alt="">
+            </div>
+            <div class="content__item content__item-purple"
+              style="background-image: url('images/content/roulette-4.png');">
+              <img class="content__item-img" src="images/content/item-4.png" alt="">
+            </div>
+            <div class="content__item content__item-blue"
+              style="background-image: url('images/content/roulette-5.png');">
+              <img class="content__item-img" src="images/content/item-5.png" alt="">
+            </div>
           </div>
         </div>
       </div>
       <div class="roulette__button">
-        <button class="roulette__button-btn">დატრიალება</button>
+        <button id="roulette-button" class="roulette__button-btn">დატრიალება</button>
         <p class="roulette__button-descr">1 დატრიალების ღირებულებაა 200H ქოინი</p>
       </div>
+      <section class="modal" id="modal">
+        <div class="modal__overlay"></div>
+        <div class="container">
+          <div class="modal__content" style="background-image: url('images/content/content-bg.png');">
+            <div class="modal__content-title">
+              შენ მოიგე:
+            </div>
+            <img src="" alt="modal__content-image" id="modal-item-image">
+            <div class="modal__close">
+              <div class="modal__btn-wrapper">
+                <button class="modal__btn modal__btn-leave">დავიტოვებ</button>
+                <button class="modal__btn modal__btn-sell">გაყიდვა: 50000 </button>         
+              </div>
+              <button class="modal__close-btn" id="modal-close">
+                კიდევ გახსნა
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <audio src="/mp3/roulette-play.mp3" id="sound-roulette" preload></audio>
     </div>
   </main>
 
