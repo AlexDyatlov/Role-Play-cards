@@ -93,6 +93,7 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/slick-carousel/slick/slick.css",
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -108,6 +109,9 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
+			"node_modules/slick-carousel/slick/slick.min.js",
+			// "node_modules/@barba/core/dist/barba.js",
+			// "node_modules/gsap/dist/gsap.min.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
@@ -124,7 +128,13 @@ gulp.task("minjs", function () {
 	return gulp
 		.src("src/js/main.js")
 		.pipe(size())
-		.pipe(babel())
+		.pipe(babel({
+			presets: [
+				['@babel/env', {
+					modules: false
+				}]
+			]
+		}))
 		.pipe(uglify())
 		.pipe(
 			rename({

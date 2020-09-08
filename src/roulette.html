@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/_head.html')
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body data-barba="wrapper">
+  @@include('components/_header.html')
+  <div class="load-container">
+    <div class="loading-screen"></div>
+  </div>
+
+  <main class="roulette" data-barba="container" data-barba-namespace="about-section"
+    style="background-image: url('images/roulette-bg.png');">
+    <div class="container">
+      <div class="roulette__top">
+        <a class="roulette__top-back" href="page.html">
+          უკან დაბრუნება
+        </a>
+        <div class="roulette__box">
+          <div class="roulette__box-info">
+            <div class="roulette__box-name">Mike Robox</div>
+            <div class="roulette__box-score">ანგარიშზე: <span>2000</span> HC</div>
+          </div>
+          <div class="roulette__box-img">
+            <img src="images/content/face.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="roulette__list">
+        <a class="roulette__list-item roulette__list-item-active" href="#">რულეტკა</a>
+        <a class="roulette__list-item" href="#">ქოინების გადაცვლა</a>
+        <a class="roulette__list-item" href="#">ბალანსის შევსება</a>
+        <a class="roulette__list-item" href="#">დახმარება</a>
+      </div>
+      <div class="roulette__inner" style="background-image: url('images/content/roulette.png');">
+        <div class="content__items-container">
+          <div class="content__items" id="roulette">
+            <div class="content__item content__item-darkblue"
+              style="background-image: url('images/content/roulette-1.png');" data-text="money">
+              <img class="content__item-img" src="images/content/item-1.png" alt="">
+            </div>
+            <div class="content__item content__item-green"
+              style="background-image: url('images/content/roulette-2.png');" data-text="glasses">
+              <img class="content__item-img" src="images/content/item-2.png" alt="">
+            </div>
+            <div class="content__item content__item-yellow"
+              style="background-image: url('images/content/roulette-3.png');" data-text="coins">
+              <img class="content__item-img" src="images/content/item-3.png" alt="">
+            </div>
+            <div class="content__item content__item-purple"
+              style="background-image: url('images/content/roulette-4.png');" data-text="car">
+              <img class="content__item-img" src="images/content/item-4.png" alt="">
+            </div>
+            <div class="content__item content__item-blue"
+              style="background-image: url('images/content/roulette-5.png');" data-text="INFERNUS">
+              <img class="content__item-img" src="images/content/item-5.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="roulette__button">
+        <button id="roulette-button" class="roulette__button-btn">დატრიალება</button>
+        <p class="roulette__button-descr">1 დატრიალების ღირებულებაა 200H ქოინი</p>
+      </div>
+      <section class="modal" id="modal">
+        <div class="modal__overlay"></div>
+        <div class="container">
+          <div class="modal__content" style="background-image: url('images/content/content-bg.png');">
+            <div class="modal__content-title">
+              შენ მოიგე:
+            </div>
+            <div class="modal__content-text"></div>
+            <div class="modal__content-item">
+              <img class="modal__content-icons" src="" alt="modal__content-image" id="modal-item-image">
+            </div>
+            <div class="modal__close">
+              <div class="modal__btn-wrapper">
+                <button class="modal__btn modal__btn-leave">დავიტოვებ</button>
+                <button class="modal__btn modal__btn-sell">გაყიდვა: 50000 </button>
+              </div>
+              <button class="modal__close-btn" id="modal-close">
+                კიდევ გახსნა
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <audio src="mp3/roulette-play.mp3" id="sound-roulette" preload></audio>
+    </div>
+  </main>
+
+
+
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>
