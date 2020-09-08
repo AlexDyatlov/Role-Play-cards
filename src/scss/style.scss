@@ -16,10 +16,7 @@
     &::before{
       position: absolute;
       content: '';
-      background-image: url('../images/content/girl.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background: center / cover no-repeat url('../images/content/girl.png');
       width: 435px;
       height: 990px;
       left: 0px;
@@ -925,10 +922,7 @@
   padding-top: 0;
   width: 0%;
   height: 100%;
-  background-image: url('../images/service-bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: center / cover no-repeat  url('../images/service-bg.png');
 }
 
 .load-container{
@@ -979,7 +973,7 @@
 
 // start roulette
 .roulette{
-  min-height: 1440px;
+  min-height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -998,10 +992,10 @@
       position: absolute;
       content: '';
       left: -80px;
-    top: -25px;
+      top: -25px;
       width: 84px;
       height: 84px;
-      background-image: url('../images/icons/roulette-arrow.png');
+      background: center / cover no-repeat url('../images/icons/roulette-arrow.png');
     }
   }
 }
@@ -1053,7 +1047,7 @@
   }
 }
 .roulette__inner{
-  min-height: 719px;
+  height: 719px;
   width: 1981px;
   margin-left: -40px;
   background-repeat: no-repeat;
@@ -1068,7 +1062,7 @@
     transform: translate(-50%,-50%);
     width: 170px;
     height: 140px;
-    background-image: url('../images/icons/arrow-down.png');
+    background: center / cover no-repeat  url('../images/icons/arrow-down.png');
   }
   &::after{
     position: absolute;
@@ -1078,7 +1072,7 @@
     transform: translate(-50%,-50%);
     width: 137px;
     height: 113px;
-    background-image: url('../images/icons/arrow-up.png');
+    background: center / cover no-repeat url('../images/icons/arrow-up.png');
   }
 }
 .content__items{
@@ -1087,7 +1081,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.content__item{
+.content__item {
   width: 300px;
   height: 300px;
   background-repeat: no-repeat;
@@ -1096,63 +1090,54 @@
   position: relative;
   flex-shrink: 0;
   margin: 0 8px;
-  &-img{
-    position: relative;
-    top: 75px;
-  }
-  &::before{
+  &-img {
     position: absolute;
-    content: '';
-    bottom: -10px;
-    left: -15px;
-    width: 325px;
-    height: 325px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &::before {
+      position: absolute;
+      content: '';
+      bottom: -10px;
+      left: -15px;
+      width: 325px;
+      height: 325px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
   }
 }
-.content__item-darkblue{
-  img{
-    top: 55px;
-    left: -15px;
-  }
-  &::before{
-    background-image: url('../images/content/line-1.png');
+.content__item-darkblue {
+  &::before {
+      background-image: url('../images/content/line-1.png') ;
   }
 }
-.content__item-green{
-  img{
-    top: 95px;
-  }
-  &::before{
-    background-image: url('../images/content/line-2.png');
+.content__item-green {
+  &::before {
+      background-image: url('../images/content/line-2.png');
   }
 }
-.content__item-yellow{
-  img{
-    left: 45px;
-  }
-  &::before{
-    background-image: url('../images/content/line-3.png');
+.content__item-yellow {
+  &::before {
+      background-image: url('../images/content/line-3.png');
   }
 }
-.content__item-purple{
-  &::before{
-    background-image: url('../images/content/line-4.png');
+.content__item-purple {
+  &::before {
+      background-image: url('../images/content/line-4.png');
   }
 }
-.content__item-blue{
-  img{
-    top: 85px;
+.content__item-blue {
+  &::before {
+      background-image: url('../images/content/line-5.png');
   }
- &::before{
-  background-image: url('../images/content/line-5.png');
- }
 }
+
 .roulette__button{
   max-width: 452px;
-  margin: 0 auto;
+  left: 42%;
+  position: absolute;
   &-btn{
     color: #fdfdfd;
     font-size: 33px;
@@ -1218,15 +1203,29 @@
 }
 .modal__content{
   margin: 315px auto 0;
-  width: 880px;
-  height: 856px;
+  width: 960px;
+  height: 940px;
   text-align: center;
   padding: 95px 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &-title{
     font-size: 35px;
     color: rgba(244, 244, 244, 0.76);
-    margin-bottom: 15px;
+  }
+  &-item{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-text{
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #f4f4f4;
+
   }
 }
 .modal__btn-wrapper{
@@ -1241,6 +1240,10 @@
   height: 38px;
   border: none;
   cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    background-color: #0dc2ec;
+  }
   &-leave{
     width: 199px;
     border-radius: 15px 0 0 0;
@@ -1253,10 +1256,7 @@
     &::before{
       position: absolute;
       content: '';
-      background-image: url('../images/content/item-3.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background: center / cover no-repeat  url('../images/content/item-3.png');
       right: 10px;
       top: 8px;
       width: 27px;
@@ -1280,7 +1280,11 @@
 }
 // end modal
 
-
-
+.modal__content-icons{
+  position: absolute;
+  left: 50% ;
+  top: 50% ;
+  transform: translate(-50%, -50%);
+}
 
 @import 'media';

@@ -1,34 +1,240 @@
 @media(max-width: 1920px){
+  .roulette__button{
+    position: static;
+    margin: 0 auto;
+  }
   .card{
     padding: 22px 0 14px;
   }
   .service{
     padding-top: 91px;
   }
+  .roulette {
+    padding: 70px 0;
+    &__list{
+      margin: 100px auto 0;
+    }
+    &__inner{
+      height: 570px;
+      width: 1600px;
+      margin: 0 auto;
+      &::after{
+        bottom: -8%;
+      }
+    }
+    &__top-back{
+      font-size: 26px;
+      &::before{
+        left: -70px;
+        top: -19px;
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+  .modal__content {
+    margin: 100px auto 0;
+    width: 880px;
+    height: 860px;
+  }
+  .content__items-container{
+    min-height: 570px;
+    max-width: 1280px;
+  }
+  .content__item {
+    margin: 0 15px;
+    width: 225px;
+    height: 225px;
+    &-img{
+      width: 100%;
+    }
+    &::before{
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .content__item-yellow {
+    img{
+      width: 75%;
+    }
+  }
 }
 
 @media(max-width: 1370px){
+  .list__items{
+    padding: 40px 40px 40px 30px;
+  }
   .service{
     padding-top: 65px;
   }
-  .card__inner{
-    padding: 20px;
-    min-height: 768px;
-    &::before{
-      display: none;
+  .card{
+    padding: 13px 0 10px;
+    &__top{
+    margin-bottom: 25px;
     }
-  }
-  .card__items{
-    max-width: 175px;
+    &__tabs{
+      margin-bottom: 10px;
+    }
+    &__items{
+      max-width: 205px;
+      min-height: 600px;
+      padding: 20px 0;
+    }
+    &__logo{
+      width: 135px;
+      height: 35px;
+      &::after{
+        display: none;
+      }
+    }
+    &__inner{
+      padding: 20px;
+      min-height: 743px;
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+    &__item{
+      padding: 15px 0;
+    }
   }
   .profile__box{
     margin-right: 75px;
   }
   .statistics__inner{
     padding: 20px 40px;
-    width: 1117px;
+    width: 1080px;
+    min-height: 600px;
   }
   .statistics__top{
+    margin-bottom: 20px;
+  }
+  .business__item{
+    padding: 20px 30px 20px 54px;
+    min-height: 600px;
+    margin-left: 10px;
+    &-img{
+      height: 193px;
+      width: 425px;
+      margin: 0 auto 15px;
+    }
+  }
+  .cars__list-btn{
+    padding: 8px 45px;
+  }
+  .slider-inner {
+    max-width: 1030px;
+    margin-right: 60px;
+  }
+  .organization__items {
+    width: 340px;
+    min-height: 600px;
+    padding: 60px 0;
+    &-title{
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+  .organization__item{
+    padding: 22px 0 22px 30px;
+  }
+  .factions{
+    &__wrapper{
+      width: 1080px;
+    }
+    &__inner {
+      padding: 25px 0 5px;
+      min-height: 600px;
+    }
+  }
+  .faction{
+    &__top{
+      margin-bottom: 15px;
+    }
+    &__info{
+      margin-bottom: 20px;
+    }
+  }
+  .tab__inner {
+    min-height: 600px;
+    padding: 100px 0 25px;
+  }
+  .invite__inner::before{
+    right: -15px;
+    width: 245px;
+    height: 290px;
+  }
+  .exile__inner::before{
+    right: -20px;
+    bottom: -10px;
+    width: 280px;
+    height: 230px;
+  }
+  .content-btn{
     margin-bottom: 30px;
+  }
+  .slider-arrows.faction-arrows {
+    bottom: -20px;
+  }
+  .slider-arrows__right {
+    left: 0px;
+  }
+  .roulette {
+    padding: 30px 0;
+    &__list{
+      margin: 65px auto 0;
+      max-width: 800px;
+      &-item{
+        font-size: 20px;
+      }
+    }
+    &__inner{
+      height: 380px;
+      width: 1100px;
+      &::before{
+        top: 15%;
+        width: 130px;
+        height: 100px;
+      }
+      &::after{
+        width: 100px;
+        height: 70px;
+      }
+    }
+  }
+  .content__items-container{
+    min-height: 400px;
+    max-width: 850px;
+  }
+  .content__item {
+    width: 140px;
+    height: 140px;
+    &::before{
+      width: 160px;
+      height: 160px;
+    }
+  }
+  .roulette__button{
+    max-width: 320px;
+    &-btn{
+      font-size: 25px;
+    }
+    &-descr{
+      font-size: 12px;
+    }
+  }
+  .modal__content {
+    width: 600px;
+    height: 580px;
+    &-icons{
+      width: 80%;
+    }
+    &-text{
+      font-size: 40px;
+    }
+    &-title{
+      font-size: 22px;
+    }
   }
 }
