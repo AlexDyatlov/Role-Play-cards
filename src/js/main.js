@@ -146,12 +146,11 @@ $(function () {
             );
             
             modelItemText.text(selectedItem.data('text'));
-            console.log(selectedItem);
             // * то что случиться после прокрутки анимации
             setTimeout(() => {
                 $(this).css({ pointerEvents: 'inherit' });
                 modal.fadeIn();
-            }, transitionTime);
+            }, 8500);
         });
         //* закрытие окна  
         modalClose.on('click', () => {

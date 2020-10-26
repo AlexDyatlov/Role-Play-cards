@@ -8,9 +8,7 @@
   padding: 170px 0;
   &__inner{
     min-height: 1044px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: center/cover no-repeat;
     padding: 105px 70px 30px 320px;
     position: relative;
     &::before{
@@ -615,10 +613,8 @@
 
 // start new page
 .service{
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 100vh;
+  background: center/cover no-repeat;
   padding-top: 280px;
   &__inner{
     max-width: 1222px;
@@ -974,9 +970,7 @@
 // start roulette
 .roulette{
   min-height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat;
   padding: 109px 0;
 }
 .roulette__top{
@@ -1050,9 +1044,7 @@
   height: 719px;
   width: 1981px;
   margin-left: -40px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat;
   position: relative;
   &::before{
     position: absolute;
@@ -1084,9 +1076,7 @@
 .content__item {
   width: 300px;
   height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat;
   position: relative;
   flex-shrink: 0;
   margin: 0 8px;
@@ -1103,9 +1093,7 @@
       left: -15px;
       width: 325px;
       height: 325px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background: center/cover no-repeat;
   }
 }
 .content__item-darkblue {
@@ -1208,9 +1196,7 @@
   text-align: center;
   padding: 95px 0;
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: center/cover no-repeat;
   &-title{
     font-size: 35px;
     color: rgba(244, 244, 244, 0.76);

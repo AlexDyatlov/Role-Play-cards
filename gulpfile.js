@@ -110,8 +110,6 @@ gulp.task("script", function () {
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/slick-carousel/slick/slick.min.js",
-			// "node_modules/@barba/core/dist/barba.js",
-			// "node_modules/gsap/dist/gsap.min.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
